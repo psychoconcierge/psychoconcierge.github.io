@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        />
+        <title>
+            Contacter la conciergerie - Faculté de psychologie - Université de
+            Strasbourg
+        </title>
+    </head>
+    <body>
+        <main class="container">
+            <center>
+                <img src="logo.png" width="250px" style="margin: 48px" />
+                <h1>Contacter la conciergerie</h1>
+            </center>
+
+            <form action="https://formspree.io/f/xyzjyqnk" method="POST">
+                <label for="probleme"><strong>Type de problème</strong></label>
+
+                <select required name="Type de problème" id="probleme">
+                    <option selected disabled value="">
+                        Sélectionnez une option
+                    </option>
+                    <option value="Manque de PQ/Savon">
+                        Manque de PQ/Savon
+                    </option>
+                    <option value="Fuite / flaque">Fuite / flaque</option>
+                    <option value="Sanitaires bouchés">
+                        Sanitaires bouchés
+                    </option>
+                    <option value="Sanitaires souillés">
+                        Sanitaires souillés
+                    </option>
+                    <option value="Dégradation">Dégradation</option>
+                    <option value="Autre">Autre, à spécifier...</option>
+                </select>
+
+                <label for="localisation">Localisation</label>
+
+                <select required name="Localisation" id="localisation">
+                    <option selected disabled value="">
+                        Sélectionnez une option
+                    </option>
+                    <option value="Pavillon">Pavillon</option>
+                    <option value="Aile Viaud">Aile Viaud</option>
+                    <option value="Aile Lagache">Aile Lagache</option>
+                    <option value="Hall central">Hall central</option>
+                    <option value="1er étage">1<sup>er</sup> étage</option>
+                    <option value="2e étage">2<sup>ème</sup> étage</option>
+                    <option value="Autre">Autre, à spécifier...</option>
+                </select>
+
+                <label for="observation">
+                    <strong>Observations</strong> (facultatif)
+                </label>
+                <textarea
+                    name="Observations"
+                    id="observation"
+                    placeholder="Donnez éventuellement des précisions..."
+                ></textarea>
+
+                <button type="submit">Transmettre</button>
+            </form>
+        </main>
+    </body>
+</html>
