@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+        />
+        <title>
+            Demande d'accès - Faculté de psychologie - Université de
+            Strasbourg
+        </title>
+    </head>
+    <body>
+        <main class="container">
+            <center>
+                <img src="logo.png" width="233px" style="margin: 48px" />
+                <h1>Demande d'accès</h1>
+            </center>
+
+            <form action="https://formspree.io/f/xyzjyqnk" method="POST">
+                <label for="Clefs"><strong>Clefs</strong></label>
+
+                <select required name="Type de problème" id="probleme">
+                    <option selected disabled value="">
+                        Sélectionnez une option
+                    </option>
+                    <option value="Manque de papier, savon, etc...">
+                        Clé bâtiment + Clé pare feu
+                    </option>
+                    <option value="Fuite / flaque">Fuite / flaque</option>
+                    <option value="Sanitaires bouchés">
+                        Clé LNCA
+                    </option>
+                    <option value="Sanitaires souillés">
+                        Clé Doctorants / Apprentis
+                    </option>
+                    <option value="Problème">Problème, à spécifier</option>
+                    <option value="Autre">Autre, à spécifier...</option>
+                </select>
+
+                <label for="localisation"><strong>Localisations</strong></label>
+
+                <select required name="Localisations" id="localisations">
+                    <textarea
+                    name="Localisations"
+                    id="Localisationsn"
+                    placeholder="Donner les précisions nécessaire au traitement de la demande."
+                ></textarea>
+                </select>
+
+               
+                <button type="submit">Transmettre</button>
+            </form>
+        </main>
+    </body>
+</html>
