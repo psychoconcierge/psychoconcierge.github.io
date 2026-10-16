@@ -18,32 +18,59 @@
                 <img src="logo.png" width="233px" style="margin: 48px" />
                 <h1>Demande d'accès</h1>
             </center>
-
             <form action="https://formspree.io/f/xyzjyqnk" method="POST">
-                <label for="Clefs"><strong>Clefs</strong></label>
 
+                <!-- === NOUVEAUX CHAMPS OBLIGATOIRES === -->
+
+                <label for="nom"><strong>Nom</strong></label>
+                <input
+                    type="text"
+                    name="Nom"
+                    id="nom"
+                    placeholder="Votre nom"
+                    required
+                />
+
+                <label for="prenom"><strong>Prénom(s)</strong></label>
+                <input
+                    type="text"
+                    name="Prénom(s)"
+                    id="prenom"
+                    placeholder="Prénom(s)"
+                    required
+                />
+
+                <label for="email"><strong>Adresse mail</strong></label>
+                <input
+                    type="email"
+                    name="Adresse mail"
+                    id="email"
+                    placeholder="votre.email@unistra.fr"
+                    required
+                />
+
+                <!-- === CHAMPS EXISTANTS === -->
+
+                <label for="demande"><strong>Clefs</strong></label>
                 <select name="Type de demande" id="demande" required>
                     <option selected disabled value="">
                         Sélectionnez une option
                     </option>
                     <option value="Clé bâtiment + Clé pare feu">Clé bâtiment + Clé pare feu</option>
-                    <option value=" Clé LNCA">Clé LNCA</option>
+                    <option value="Clé LNCA">Clé LNCA</option>
                     <option value="Clé Doctorants / Apprentis">Clé Doctorants / Apprentis</option>
                     <option value="Problème">Problème, à spécifier</option>
                     <option value="Autre">Autre, à spécifier...</option>
                 </select>
 
-                <label required name="Précisions" id="Précisions" for="Précisions">
-                    <strong>Précisions</strong>
-                </label>
+                <label for="Precisions"><strong>Précisions</strong></label>
                 <textarea
                     name="Précisions"
-                    id="Précisions"
+                    id="Precisions"
                     placeholder="Précisez la justification de la demande."
                     required
                 ></textarea>
 
-               
                 <button type="submit">Transmettre</button>
             </form>
         </main>
