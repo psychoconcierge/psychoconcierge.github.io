@@ -22,7 +22,7 @@
 
                 <!-- === NOUVEAUX CHAMPS OBLIGATOIRES === -->
 
-                <label for="nom"><strong>Nom</strong></label>
+                <label for="nom"><strong>Nom(s)</strong></label>
                 <input
                     type="text"
                     name="Nom"
@@ -40,12 +40,13 @@
                     required
                 />
 
-                <label for="email"><strong>Adresse mail</strong></label>
+             <!-- @unistra.fr ou @etu.unistra.fr ou @gmail.com -->
                 <input
                     type="email"
                     name="Adresse mail"
                     id="email"
-                    placeholder="votre.email@unistra.fr"
+                    placeholder="prenom.nom@unistra.fr"
+                    pattern="^[a-zA-Z0-9._%+-]+@(unistra\.fr|etu\.unistra\.fr|gmail\.com)$"
                     required
                 />
 
