@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <title>Accueil - Faculté de psychologie - Université de Strasbourg</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f5f7fa;
+        }
+
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 640px;
+            width: 100%;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .btn-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+            text-decoration: none;
+            border-radius: 1rem;
+            background: #fff;
+            color: #1a1a2e;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            color: #1a1a2e;
+        }
+
+        .btn-card:active {
+            transform: translateY(-2px);
+        }
+
+        .btn-card .icon {
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .btn-card .label {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        /* Responsive : 1 colonne sur petit écran */
+        @media (max-width: 480px) {
+            .buttons-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .btn-card {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <center>
+            <img src="logo.png" width="180px" style="margin: 2rem 0 1rem" />
+            <h1 style="margin-bottom: 0.5rem;">Accueil</h1>
+            <p style="color: #555;">Faculté de psychologie – Université de Strasbourg</p>
+        </center>
+
+        <div class="buttons-grid">
+            <a class="btn-card" href="https://psychoconcierge.github.io" target="_blank">
+                <span class="icon">❓</span>
+                <span class="label">Contact</span>
+            </a>
+
+            <a class="btn-card" href="https://psychoconcierge.github.io/Keys.html" target="_blank">
+                <span class="icon">🔑</span>
+                <span class="label">Accès</span>
+            </a>
+
+            <a class="btn-card" href="https://dynamic-forms.app.unistra.fr/f/repareimmo" target="_blank">
+                <span class="icon">🔧</span>
+                <span class="label">Réparation</span>
+            </a>
+
+            <a class="btn-card" href="https://seafile.unistra.fr/d/066b8231948447d8b95c/" target="_blank">
+                <span class="icon">📄</span>
+                <span class="label">Documentation</span>
+            </a>
+        </div>
+    </main>
+</body>
+</html>
