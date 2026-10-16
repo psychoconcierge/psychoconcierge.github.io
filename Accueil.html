@@ -1,64 +1,42 @@
 <!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-    <title>Accueil - Faculté de psychologie - Université de Strasbourg</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: #f5f7fa;
-        }
-
-        .buttons-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            max-width: 640px;
-            width: 100%;
-            margin: 3rem auto;
-            padding: 0 1rem;
-        }
-
-        .btn-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem 1.5rem;
-            text-decoration: none;
-            border-radius: 1rem;
-            background: #fff;
-            color: #1a1a2e;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .btn-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            color: #1a1a2e;
-        }
-
-        .btn-card:active {
-            transform: translateY(-2px);
-        }
-
-        .btn-card .icon {
-            font-size: 3.5rem;
             line-height: 1;
             margin-bottom: 1rem;
+            color: var(--pico-primary);
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-card:hover .icon {
+            color: var(--pico-primary-hover);
+            transform: scale(1.05);
         }
 
         .btn-card .label {
-            font-size: 1.3rem;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 600;
             letter-spacing: 0.02em;
+            color: var(--pico-text);
+            transition: color 0.2s ease;
+        }
+
+        .btn-card:hover .label {
+            color: var(--pico-primary-hover);
+        }
+
+        /* En-tête */
+        .page-header {
+            text-align: center;
+            padding: 2rem 1rem 0;
+        }
+
+        .page-header h1 {
+            color: var(--pico-text);
+            margin-bottom: 0.3rem;
+        }
+
+        .page-header p {
+            color: var(--pico-text-muted);
+            font-size: 1rem;
+            margin: 0;
         }
 
         /* Responsive : 1 colonne sur petit écran */
@@ -75,31 +53,31 @@
     </style>
 </head>
 <body>
-    <main class="container">
-        <center>
-            <img src="logo.png" width="180px" style="margin: 2rem 0 1rem" />
-            <h1 style="margin-bottom: 0.5rem;">Accueil</h1>
-            <p style="color: #555;">Faculté de psychologie – Université de Strasbourg</p>
-        </center>
+    <header class="page-header">
+        <img src="logo.png" width="160px" style="margin: 1rem 0" />
+        <h1>Accueil</h1>
+        <p>Faculté de psychologie – Université de Strasbourg</p>
+    </header>
 
+    <main class="container" style="padding: 0 1rem;">
         <div class="buttons-grid">
-            <a class="btn-card" href="https://psychoconcierge.github.io" target="_blank">
-                <span class="icon">❓</span>
+            <a class="btn-card" href="https://psychoconcierge.github.io" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">❓</span>
                 <span class="label">Contact</span>
             </a>
 
-            <a class="btn-card" href="https://psychoconcierge.github.io/Keys.html" target="_blank">
-                <span class="icon">🔑</span>
+            <a class="btn-card" href="https://psychoconcierge.github.io/Keys.html" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">🔑</span>
                 <span class="label">Accès</span>
             </a>
 
-            <a class="btn-card" href="https://dynamic-forms.app.unistra.fr/f/repareimmo" target="_blank">
-                <span class="icon">🔧</span>
+            <a class="btn-card" href="https://dynamic-forms.app.unistra.fr/f/repareimmo" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">🔧</span>
                 <span class="label">Réparation</span>
             </a>
 
-            <a class="btn-card" href="https://seafile.unistra.fr/d/066b8231948447d8b95c/" target="_blank">
-                <span class="icon">📄</span>
+            <a class="btn-card" href="https://seafile.unistra.fr/d/066b8231948447d8b95c/" target="_blank" rel="noopener">
+                <span class="icon" aria-hidden="true">📄</span>
                 <span class="label">Documentation</span>
             </a>
         </div>
